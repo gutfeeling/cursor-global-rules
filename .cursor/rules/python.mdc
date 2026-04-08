@@ -11,3 +11,4 @@ alwaysApply: false
 5. Function arguments and return value should use a single type when possible. Try not to mix types.
 6. Code files (i.e. `.py` files) should document the abstractions being used, focusing on the "why". Readers of the code should be able to read docstrings or comments to get a high-level overview of why the code is organized the way it is.
 7. For scripts, arguments that users can *reasonably expect to modify* should be exposed using argparse, with suitable defaults. Don't use module level vars for specifying defaults in such cases.
+8. Use the logging module whenever possible instead of print.
