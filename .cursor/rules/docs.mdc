@@ -5,6 +5,6 @@ alwaysApply: true
 
 1. After implementing a feature, document it in the `docs` folder in markdown files, prioritizing the "why" (why certain design choices were made).
 2. Document the high level overview of the project in `README.md`. Keep it short and concise. The readme should not try to become the documentation.
-3. Add required packages to `requirements.txt`.
+3. Add required packages to `requirements.txt` or `pyproject.toml` as appropriate. Don't maintain two copies.
 4. After implementing a feature or change, always check if the documentation or README or requirements should be updated.
 5. The user uses the `notes` folder to dump thoughts. The information in the notes do not reflect the current state of the project and were only relevant at the point in time when they were written. For latest information, consult the `docs` folder and the `README.md` file.
