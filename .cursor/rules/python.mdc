@@ -1,15 +1,31 @@
 ---
 description: Python coding conventions for this workspace
-globs: **/*.py
 alwaysApply: false
 ---
+Follow PEP 8 guidelines as a default. The following rules take precedence.
 
-1. Follow PEP 8 guidelines as a default. The following rules take precedence.
-2. Don't use import statements inside functions, unless it actually needs to be there. Put imports at the top of the file. Use separate sections for stdlib modules, third-party modules and local modules. Sort each section alphabetically.
-3. Use `pathlib` for all path related operations, whenever possible.
-4. Use f-strings for string formatting whenever possible.
-5. Use type hints whenever possible.
-6. Function arguments and return value should use a single type when possible. Try not to mix types.
-7. Code files (i.e. `.py` files) should document the abstractions being used, focusing on the "why". Readers of the code should be able to read docstrings or comments to get a high-level overview of why the code is organized the way it is.
-8. For scripts, arguments that users can *reasonably expect to modify* should be exposed using argparse, with suitable defaults. Don't use module level vars for specifying defaults in such cases.
-9. Use the logging module whenever possible instead of print.
+## Import 
+
+1. Don't use import statements inside functions, unless it actually needs to be there. Put imports at the top of the file. 
+2. Use separate sections for stdlib modules, third-party modules and local modules. Sort each section alphabetically.
+
+## Package preferences
+
+1. Use `pathlib` for all path related operations, whenever possible.
+
+## Syntax preferences
+1. Use f-strings for string formatting whenever possible.
+2. When calling functions, use keyword arguments whenever possible e.g. `foo(arg=value)`, not `foo(value)`.
+
+## Type hints
+1. Use type hints whenever possible.
+2. Function arguments and return value should use a single type when possible. Try not to mix types.
+
+## Docstrings and comments
+1. Use docstrings and comments focusing on the "why" (as opposed to "what" or "how"). Readers of the code should be able to read docstrings or comments to get a high-level overview of why the code is organized the way it is i.e. which abstraction does a function achieve and why this is a good abstraction etc.
+
+## Scripts
+1. For scripts, arguments that users can *reasonably expect to modify* should be exposed as a command line argument, with suitable defaults. Don't use module level vars for specifying defaults in such cases.
+
+## Logging
+1. Use the `logging` module whenever possible instead of `print()`.
