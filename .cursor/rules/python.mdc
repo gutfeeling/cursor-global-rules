@@ -4,11 +4,12 @@ globs: **/*.py
 alwaysApply: false
 ---
 
-1. Don't use import statements inside functions, unless it actually needs to be there. Put imports at the top of the file. Use separate sections for stdlib modules, third-party modules and local modules. Sort each section alphabetically.
-2. Use `pathlib` for all path related operations, whenever possible.
-3. Use f-strings for string formatting whenever possible.
-4. Use type hints whenever possible.
-5. Function arguments and return value should use a single type when possible. Try not to mix types.
-6. Code files (i.e. `.py` files) should document the abstractions being used, focusing on the "why". Readers of the code should be able to read docstrings or comments to get a high-level overview of why the code is organized the way it is.
-7. For scripts, arguments that users can *reasonably expect to modify* should be exposed using argparse, with suitable defaults. Don't use module level vars for specifying defaults in such cases.
-8. Use the logging module whenever possible instead of print.
+1. Follow PEP 8 guidelines as a default. The following rules take precedence.
+2. Don't use import statements inside functions, unless it actually needs to be there. Put imports at the top of the file. Use separate sections for stdlib modules, third-party modules and local modules. Sort each section alphabetically.
+3. Use `pathlib` for all path related operations, whenever possible.
+4. Use f-strings for string formatting whenever possible.
+5. Use type hints whenever possible.
+6. Function arguments and return value should use a single type when possible. Try not to mix types.
+7. Code files (i.e. `.py` files) should document the abstractions being used, focusing on the "why". Readers of the code should be able to read docstrings or comments to get a high-level overview of why the code is organized the way it is.
+8. For scripts, arguments that users can *reasonably expect to modify* should be exposed using argparse, with suitable defaults. Don't use module level vars for specifying defaults in such cases.
+9. Use the logging module whenever possible instead of print.
