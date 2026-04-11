@@ -1,0 +1,8 @@
+---
+description: How to manage third-party libraries
+alwaysApply: true
+---
+
+1. Prefer working with latest version of packages, unless there's a specific reason to work with an older version.
+2. After making changes, add any required packages to `requirements.txt` or `pyproject.toml` as appropriate. Don't maintain two copies.
+3. Pin package versions using `==`. Don't use `>=`. Use the version reported by `pip freeze -l`.
